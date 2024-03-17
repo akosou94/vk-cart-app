@@ -5,6 +5,7 @@ import { Product } from '../../../features/Products/types';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 
 import './Buttons.css';
+import Button from '../Button/Button';
 
 type Props = {
   dispatch: Dispatch,
@@ -13,13 +14,10 @@ type Props = {
 
 const Buttons:FC<Props> = ({dispatch, product}) => {
   return (
-    <div className='buttons'>
       <div className='buttons'>
-          <button className='button button-add' onClick={() => handleAddToCart(dispatch, product)}><FaPlus /></button>
-          <button className='button button-remove' onClick={() => handleRemoveFromCart(dispatch, product.id)}><FaMinus /></button>
+          <Button className='button button-add' onClick={() => handleAddToCart(dispatch, product)}><FaPlus /></Button>
+          <Button className='button button-remove' onClick={() => handleRemoveFromCart(dispatch, product.id)}><FaMinus /></Button>
       </div>
-      
-    </div>
   )
 }
 

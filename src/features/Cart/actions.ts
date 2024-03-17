@@ -1,5 +1,5 @@
 import { Dispatch } from "@reduxjs/toolkit"
-import { addToCart, deleteFromCart, removeFromCart } from "./slice"
+import { addToCart, clearCart, deleteFromCart, removeFromCart } from "./slice"
 import { Product } from "../Products/types"
 
 export const handleAddToCart = (dispatch: Dispatch, product: Product) => {
@@ -12,4 +12,8 @@ export const handleRemoveFromCart = (dispatch: Dispatch, productId: number) => {
 
 export const handleDeleteFromCart = (dispatch: Dispatch, product: Product) => {
   dispatch(deleteFromCart(product.id))
+}
+
+export const handleClearCart = (dispatch: Dispatch) => {
+  dispatch(clearCart([]))
 }

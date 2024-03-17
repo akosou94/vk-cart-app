@@ -1,7 +1,6 @@
 .buttons {
   display: flex;
   gap: 5px;
-  justify-content: space-between;
 }
 
 .button {
@@ -14,12 +13,23 @@
   background-color: rgb(235, 242, 250);
 }
 
+.button-total-clear {
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  border-radius: 1.2rem;
+  color: rgb(55, 112, 177);
+  background-color: rgb(235, 242, 250);
+  font-size: 14px;
+}
+
 .button-add {
   color: #fff;
   background-color: rgb(68, 124, 186);
 }
 
-.button:hover {
+.button:hover,
+.button-total-clear:hover {
   color: rgb(235, 242, 250);
   background-color:rgb(55, 112, 177);
   transition: all 0.3s ease-in-out;
@@ -27,7 +37,8 @@
   cursor: pointer;
 }
 
-.button:active {
+.button:active,
+.button-total-clear:active {
   color: rgb(235, 242, 250);
   background-color:rgb(55, 112, 177);
   transition: all 0.3s ease-in-out;

@@ -1,11 +1,12 @@
 import { FC } from 'react'
 import { FaShoppingCart } from 'react-icons/fa';
+import { Product } from '../../Products/types'
+import { handleClearCart, handleDeleteFromCart } from '../actions';
+import { Dispatch } from '@reduxjs/toolkit';
 
+import Button from '../../../components/UI/Button/Button';
 
 import './Cart.css'
-import { Product } from '../../Products/types'
-import { handleDeleteFromCart } from '../actions';
-import { Dispatch } from '@reduxjs/toolkit';
 
 type Props = {
   dispatch: Dispatch
@@ -27,14 +28,18 @@ const Cart: FC<Props> = ({ dispatch, cartProducts, totalPrice }) => {
                   <p><b>{cartProduct.price}</b> руб.</p>
                 </div>
                 <div>
-                  <button className='button' onClick={() => handleDeleteFromCart(dispatch, cartProduct)}><FaShoppingCart /></button>
+                  <Button className='button' onClick={() => handleDeleteFromCart(dispatch, cartProduct)}><FaShoppingCart />
+                  </Button>
                 </div>
               </li>
             ))}
           </ul>
       </div>
       <hr className='horizontal-line' />
-      <p className='total-price'>Итого: <b>{totalPrice}</b> руб.</p>
+      <div className='total-block'>
+        <p className='total-price'>Итого: <b>{totalPrice}</b> руб.</p>
+        <Button className='button-total-clear' onClick={() => handleClearCart(dispatch)} title='очистить корзину' />
+      </div>
     </div>
   )
 }

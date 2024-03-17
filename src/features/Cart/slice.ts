@@ -37,9 +37,13 @@ const cartSlice = createSlice({
         state.totalPrice = Number(state.totalPrice.toFixed(2));
       }
     },
+    clearCart: (state, action) => {
+      state.cart = action.payload
+      state.totalPrice = 0;
+    }
   },
 });
 
-export const { addToCart, removeFromCart, deleteFromCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, deleteFromCart, clearCart } = cartSlice.actions;
 
 export default cartSlice;

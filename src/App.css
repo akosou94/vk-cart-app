@@ -20,8 +20,18 @@
   border-radius: 0.5rem;
   background-color: #fff;
   position: sticky;
-  top: 0;
   overflow-y: auto;
+
+  @media screen and (min-width: 1121px) {
+    top: 0;
+  }
+
+  @media screen and (max-width: 1120px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 
 .total-price {
