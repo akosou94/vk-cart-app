@@ -12,4 +12,4 @@
 
  <b>Готовый результат:</b>
 
-<img width="3008" alt="Снимок экрана 2024-03-17 в 18 25 15" src="https://github.com/akosou94/vk-cart-app/assets/122616263/ba0f2c2d-0d50-460a-82aa-bbfa32dcb0b3">
+<img width="2663" alt="Снимок экрана 2024-03-17 в 20 43 04" src="https://github.com/akosou94/vk-cart-app/assets/122616263/812e0024-9a33-4744-8aa5-9c0882a7b72a">
