@@ -15,7 +15,6 @@ function App() {
   const totalPrice = useSelector(getTotalPrice)
   const cartProducts = useSelector(getCartProducts)
 
-
   useEffect(() => {
     dispatch<any>(fetchProductsAsync());
   }, [dispatch]);
@@ -23,9 +22,9 @@ function App() {
   return (
     <div className="container">
       <div className="left">
-        <Products products={products} />
+        <Products dispatch={dispatch} products={products} />
       </div>
-      <Cart cartProducts={cartProducts} totalPrice={totalPrice} />
+      <Cart dispatch={dispatch} cartProducts={cartProducts} totalPrice={totalPrice} />
     </div>
   );
 }

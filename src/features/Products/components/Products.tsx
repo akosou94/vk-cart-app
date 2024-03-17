@@ -1,17 +1,17 @@
 import { FC } from 'react';
 import { Product } from '../types';
-import { useDispatch } from 'react-redux';
 
 import Buttons from '../../../components/UI/Buttons/Buttons';
 
+import { Dispatch } from '@reduxjs/toolkit';
 import './Products.css';
 
 type Props = {
+  dispatch: Dispatch
   products: Product[]
 }
 
-const Products: FC<Props> = ({ products }) => {
-  const dispatch = useDispatch()
+const Products: FC<Props> = ({dispatch, products }) => {
 
   const renderedProducts = products.map((product: Product, index: number) => {
     return (
@@ -39,7 +39,7 @@ const Products: FC<Props> = ({ products }) => {
 
   return (
     <>
-      <h2>Список товаров</h2>
+      {/* <h2>Список товаров</h2> */}
       <div className='products'>
         {renderedProducts && renderedProducts}
       </div>
