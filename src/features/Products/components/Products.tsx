@@ -1,8 +1,10 @@
 import { FC } from 'react';
 import { Product } from '../types';
-import './Products.css';
-import Buttons from '../../../components/UI/Buttons/Buttons';
 import { useDispatch } from 'react-redux';
+
+import Buttons from '../../../components/UI/Buttons/Buttons';
+
+import './Products.css';
 
 type Props = {
   products: Product[]

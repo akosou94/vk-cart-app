@@ -1,6 +1,6 @@
-import { Product } from "../Products/types"
-import { addToCart, deleteFromCart, removeFromCart } from "./slice"
 import { Dispatch } from "@reduxjs/toolkit"
+import { addToCart, deleteFromCart, removeFromCart } from "./slice"
+import { Product } from "../Products/types"
 
 export const handleAddToCart = (dispatch: Dispatch, product: Product) => {
   dispatch(addToCart(product))

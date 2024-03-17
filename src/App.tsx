@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import "./App.css";
-import Cart from "./features/Cart/components/Cart";
 import { getTotalPrice } from "./features/Cart/selectors";
 import { fetchProductsAsync } from "./features/Products/api";
-import Products from "./features/Products/components/Products";
 import { getProducts } from "./features/Products/selectors";
+
+import Products from "./features/Products/components/Products";
+import Cart from "./features/Cart/components/Cart";
+
+import "./App.css";
 
 function App() {
   const dispatch = useDispatch()

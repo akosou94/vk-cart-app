@@ -1,9 +1,10 @@
-import { Dispatch } from '@reduxjs/toolkit'
-import { handleAddToCart, handleDeleteFromCart, handleRemoveFromCart } from '../../../features/Cart/actions'
-import { FaShoppingCart } from 'react-icons/fa';
-import './Buttons.css'
 import { FC } from 'react'
+import { Dispatch } from '@reduxjs/toolkit'
+import { FaShoppingCart } from 'react-icons/fa';
+import { handleAddToCart, handleDeleteFromCart, handleRemoveFromCart } from '../../../features/Cart/actions'
 import { Product } from '../../../features/Products/types'
+
+import './Buttons.css'
 
 type Props = {
   dispatch: Dispatch,
