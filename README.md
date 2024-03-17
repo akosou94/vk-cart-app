@@ -1,11 +1,16 @@
+Использованные технологии: <b>React</b>
+<br />
+Стейт-менеджер: <b>Redux-toolkit</b>
+
 Для запуска приложения нужно скачать репозиторий и выполнить команды:
-npm install
+<b>npm install</b>
 
 Для запуска:
-npm run start
+<b>npm run start</b>
 
 Тестовое задание для стажировки VK - https://techno-test.vk.company/test/1881/
 
-Готовый результат:
+ <b>Готовый результат:</b>
 
-<img width="3006" alt="Снимок экрана 2024-03-17 в 16 21 16" src="https://github.com/akosou94/vk-cart-app/assets/122616263/541e06da-41b8-4089-aba0-bcf25fb97092">
+<img width="3007" alt="Снимок экрана 2024-03-17 в 17 31 45" src="https://github.com/akosou94/vk-cart-app/assets/122616263/918bd84e-afc1-4eed-b67e-9bdbc7fbc981">
+
