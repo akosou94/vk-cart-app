@@ -1,6 +1,6 @@
 .products {
   display: flex;
-  gap: 1rem;
+  gap: 1.6rem;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -10,9 +10,9 @@
   flex-direction: column;
   justify-content: space-between;
   max-width: 350px;
-  background-color: rgba(195, 213, 231, 0.587);
   border-radius: 0.2rem;
   padding: 1rem;
+  box-shadow: 0 4px 8px rgb(208, 209, 211);
 }
 
 .product:hover {
@@ -22,7 +22,7 @@
 
 .product-image {
   width: 100%;
-  min-height: 200px;
+  min-height: 350px;
   object-fit: cover;
   border-radius: 0.2rem;
   margin-bottom: 1rem;
@@ -35,4 +35,16 @@
 .product-description {
   height: max-content;
   margin-bottom: 1rem;
+}
+
+.product-title-text,
+.product-description-text {
+  color: rgb(124, 125, 126);
+}
+
+.product-price {
+  display: flex;
+  height: 100%;
+  margin-bottom: 10px;
+  align-items: flex-end;
 }

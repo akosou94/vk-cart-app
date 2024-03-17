@@ -22,16 +22,16 @@ const Products: FC<Props> = ({dispatch, products }) => {
           </li>
           <li className='product-title'>
             <p><b>Название товара: </b></p>
-            <span>{product.title}</span>
+            <p className='product-title-text'>{product.title}</p>
           </li>
           <li className='product-description'>
-            <p><b>Описание: </b><span>{product.description}</span></p>
-          </li>
-          <li>
-            <p><b>Цена: </b><span>{product.price}</span>
-            </p>
+            <span><b>Описание: </b></span>
+            <p className='product-description-text'>{product.description}</p>
           </li>
         </ul>
+          <div className='product-price'>
+            <p><b>Цена: </b><span>{product.price} руб.</span></p>
+          </div>
         <Buttons dispatch={dispatch} product={product} />
       </div>
     );
