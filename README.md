@@ -12,4 +12,7 @@
 
  <b>Готовый результат:</b>
 
-<img width="2663" alt="Снимок экрана 2024-03-17 в 20 43 04" src="https://github.com/akosou94/vk-cart-app/assets/122616263/812e0024-9a33-4744-8aa5-9c0882a7b72a">
+<b>Desktop</b> <br /><img width="2674" alt="Снимок экрана 2024-03-17 в 22 36 11" src="https://github.com/akosou94/vk-cart-app/assets/122616263/2cf4d89e-8944-4540-8e06-4041051a25d0">
+<br />
+<br />
+<b>Mobile</b> <br /><img width="427" alt="Снимок экрана 2024-03-17 в 22 38 20" src="https://github.com/akosou94/vk-cart-app/assets/122616263/93030f18-6c88-4345-849c-3e863361a634">
