@@ -1,11 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchProductsAsync } from './api';
+import { ProductsState } from './types';
 
-interface ProductsState {
-  status: string;
-  error: null | string;
-  products: any[];
-}
+
 
 const initialState: ProductsState = {
   status: 'loading',
@@ -29,9 +26,9 @@ const productsSlice = createSlice({
       })
       .addCase(fetchProductsAsync.rejected, (state, action) => {
         state.status = 'failed';
-        // state.error = action.error.message; 
+        state.error = action.error.message !== undefined ? action.error.message : null;
       });
   },
 });
 
-export default productsSlice.reducer;
+export default productsSlice;

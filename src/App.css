@@ -3,17 +3,20 @@
   justify-content: center;
   gap: 10px;
   margin: 40px;
+  border-radius: 0.5rem;
 }
 
 .left {
-  border: 1px solid green;
   flex: 3;
   padding: 10px;
+  border-radius: 0.5rem;
+  background-color: #fff;
 }
 
 .right {
-  border: 1px solid blue;
   flex: 1;
   padding: 10px;
   height: 20vh;
+  border-radius: 0.5rem;
+  background-color: #fff;
 }

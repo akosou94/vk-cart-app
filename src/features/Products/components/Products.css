@@ -1,0 +1,39 @@
+.products {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 350px;
+  background-color: rgba(182, 191, 201, 0.553);
+  border-radius: 0.2rem;
+  padding: 1rem;
+}
+
+.product:hover {
+  background-color: rgba(182, 191, 201, 0.796);
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.product-image {
+  width: 100%;
+  min-height: 200px;
+  object-fit: cover;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.product-title {
+  height: 80px;
+}
+
+.product-description {
+  height: max-content;
+  margin-bottom: 1rem;
+}

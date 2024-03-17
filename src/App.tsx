@@ -1,47 +1,16 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
+import Cart from "./features/Cart/components/Cart";
+import { getTotalPrice } from "./features/Cart/selectors";
 import { fetchProductsAsync } from "./features/Products/api";
-import { RootState } from "./store/store";
-import { addToCart, removeFromCart } from "./features/Cart/slice";
+import Products from "./features/Products/components/Products";
+import { getProducts } from "./features/Products/selectors";
 
 function App() {
   const dispatch = useDispatch()
-  const products = useSelector((state: RootState) => state?.products?.products)
-  const cart = useSelector((state: RootState) => state?.cart.cart)
-  const totalPrice = cart.reduce((accum: number, product: any) => accum + product.price, 0).toFixed(2);
-
-  console.log(products, ' products');
-  console.log(cart, ' cart');
-  console.log(totalPrice, ' totalPrice');
-
-
-  const renderedProducts = products.map((product: any) => {
-    return (
-      <div>
-        <ul key={product.id}>
-          <li>
-            <img src={product.image} width={100} height={100} alt="product" />
-          </li>
-          <li>
-            {product.id}
-          </li>
-          <li>
-            {product.title}
-          </li>
-          <li>
-            {product.price}
-          </li>
-
-        </ul>
-        <div>
-          <button onClick={() => dispatch(addToCart(product))}>+</button>
-          <button onClick={() => dispatch(removeFromCart(product.id))}>-</button>
-          <button>удалить</button>
-        </div>
-      </div>
-      );
-  });
+  const products = useSelector(getProducts)
+  const totalPrice = useSelector(getTotalPrice)
 
   useEffect(() => {
     dispatch<any>(fetchProductsAsync());
@@ -50,13 +19,9 @@ function App() {
   return (
     <div className="container">
       <div className="left">
-        <h2>Список товаров</h2>
-        {renderedProducts && renderedProducts}
+        <Products products={products} />
       </div>
-      <div className="right">
-        <h2>Корзина</h2>
-        Итого: {totalPrice} руб.
-      </div>
+      <Cart totalPrice={totalPrice} />
     </div>
   );
 }

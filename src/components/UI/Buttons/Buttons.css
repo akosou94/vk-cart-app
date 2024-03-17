@@ -1,0 +1,30 @@
+.buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: .2rem;
+  color: rgb(55, 112, 177);
+  background-color: rgb(235, 242, 250);
+}
+
+.button:hover {
+  color: rgb(235, 242, 250);
+  background-color:rgb(55, 112, 177);
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.button:active {
+  color: rgb(235, 242, 250);
+  background-color:rgb(55, 112, 177);
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0px);
+}
