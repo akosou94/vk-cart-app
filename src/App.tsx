@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getTotalPrice } from "./features/Cart/selectors";
+import { getCartProducts, getTotalPrice } from "./features/Cart/selectors";
 import { fetchProductsAsync } from "./features/Products/api";
 import { getProducts } from "./features/Products/selectors";
 
@@ -13,6 +13,8 @@ function App() {
   const dispatch = useDispatch()
   const products = useSelector(getProducts)
   const totalPrice = useSelector(getTotalPrice)
+  const cartProducts = useSelector(getCartProducts)
+
 
   useEffect(() => {
     dispatch<any>(fetchProductsAsync());
@@ -23,7 +25,7 @@ function App() {
       <div className="left">
         <Products products={products} />
       </div>
-      <Cart totalPrice={totalPrice} />
+      <Cart cartProducts={cartProducts} totalPrice={totalPrice} />
     </div>
   );
 }

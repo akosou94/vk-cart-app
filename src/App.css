@@ -16,7 +16,14 @@
 .right {
   flex: 1;
   padding: 10px;
-  height: 20vh;
+  height: fit-content;
   border-radius: 0.5rem;
   background-color: #fff;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+
+.total-price {
+  padding: 1rem;
 }
