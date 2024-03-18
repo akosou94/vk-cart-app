@@ -21,7 +21,7 @@ const Cart: FC<Props> = ({ dispatch, cartProducts, totalPrice }) => {
       <div className='cart-products'>
           <ul>
             {cartProducts.map((cartProduct, index) => (
-              <li className='cart-product-item'>
+              <li className='cart-product-item' key={cartProduct.id}>
                 <div>
                   <img src={cartProduct.image} alt="cart-product-img" className='cart-product-img' />
                   <p>{cartProduct.title}</p>

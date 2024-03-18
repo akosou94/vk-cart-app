@@ -13,7 +13,7 @@ type Props = {
 const Products: FC<Props> = ({dispatch, products }) => {
   const renderedProducts = products.map((product: TProduct) => {
     return (
-      <Product product={product} dispatch={dispatch} />
+      <Product product={product} dispatch={dispatch} key={product.id} />
     );
   });
 
