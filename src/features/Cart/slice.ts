@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 import { CartState } from './types';
 import { Product } from '../Products/types';
 
-
 const initialState: CartState = {
   status: 'loading',
   error: null,
@@ -34,7 +33,6 @@ const cartSlice = createSlice({
         state.cart.push({ ...payload, quantity: 1 });
         state.totalPrice += payload.price;
       }
-
       state.totalPrice = Number(state.totalPrice.toFixed(2));
     },
     removeFromCart: (state, action) => {

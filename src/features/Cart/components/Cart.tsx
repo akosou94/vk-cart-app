@@ -17,7 +17,7 @@ type Props = {
 const Cart: FC<Props> = ({ dispatch, cartProducts, totalPrice }) => {
   return (
     <div className="right">
-      <h2>Корзина</h2>
+      <h2 className='cart-products-title'>Корзина</h2>
       <div className='cart-products'>
           <ul>
             {cartProducts.map((cartProduct, index) => (

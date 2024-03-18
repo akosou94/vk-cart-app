@@ -12,6 +12,10 @@ body {
   background-color: rgb(237, 238, 240);
 }
 
+h2 {
+  margin: 0;
+}
+
 p, ul {
   margin: 0;
   padding: 0;

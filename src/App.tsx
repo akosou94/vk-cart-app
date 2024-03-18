@@ -21,9 +21,7 @@ function App() {
 
   return (
     <div className="container">
-      <div className="left">
-        <Products dispatch={dispatch} products={products} />
-      </div>
+      <Products dispatch={dispatch} products={products} />
       <Cart dispatch={dispatch} cartProducts={cartProducts} totalPrice={totalPrice} />
     </div>
   );

@@ -2,7 +2,15 @@
   position: sticky;
   top: 0;
   overflow-y: auto;
-  height: 250px;
+  height: 280px;
+
+  @media screen and (max-width: 1120px) {
+    height: 165px;
+  }
+}
+
+.cart-products-title {
+  padding: 10px 0;
 }
 
 .cart-product-item {

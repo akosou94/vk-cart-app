@@ -18,9 +18,11 @@ const Products: FC<Props> = ({dispatch, products }) => {
   });
 
   return (
+    <div className='left'>
       <div className='products'>
         {renderedProducts && renderedProducts}
       </div>
+    </div>
   )
 }
 
