@@ -28,7 +28,7 @@ const Cart: FC<Props> = ({ dispatch, cartProducts, totalPrice }) => {
                   <p>{cartProduct.quantity} x <b>{cartProduct.price}</b> руб.</p>
                 </div>
                 <div>
-                  <Button className='button' onClick={() => handleDeleteFromCart(dispatch, cartProduct)}><FaShoppingCart />
+                  <Button className='button' onClick={() => handleDeleteFromCart(dispatch, index)}><FaShoppingCart />
                   </Button>
                 </div>
               </li>

@@ -10,8 +10,8 @@ export const handleRemoveFromCart = (dispatch: Dispatch, productId: number) => {
   dispatch(removeFromCart(productId))
 }
 
-export const handleDeleteFromCart = (dispatch: Dispatch, product: Product) => {
-  dispatch(deleteFromCart(product.id))
+export const handleDeleteFromCart = (dispatch: Dispatch, index: number) => {
+  dispatch(deleteFromCart(index))
 }
 
 export const handleClearCart = (dispatch: Dispatch) => {

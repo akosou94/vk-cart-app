@@ -50,12 +50,12 @@ const cartSlice = createSlice({
       }
     },
     deleteFromCart: (state, action) => {
-      const deletedItems = state.cart.filter((product) => product.id === action.payload);
-      if (deletedItems.length > 0) {
-        deletedItems.forEach((deletedItem) => {
-          state.cart = state.cart.filter((product) => product.id !== action.payload);
-          state.totalPrice -= deletedItem.price * deletedItem.quantity;
-        });
+      const indexToDelete = action.payload;
+      const deletedItem = state.cart[indexToDelete];
+
+      if (deletedItem) {
+        state.cart.splice(indexToDelete, 1);
+        state.totalPrice -= deletedItem.price * deletedItem.quantity;
         state.totalPrice = Number(state.totalPrice.toFixed(2));
       }
     },
