@@ -7,7 +7,6 @@ const initialState: CartState = {
   error: null,
   cart: [],
   totalPrice: 0,
-  quantity: 0
 }
 
 const MAX_QUANTITY = 10;

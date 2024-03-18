@@ -2,8 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 import { fetchProductsAsync } from './api';
 import { ProductsState } from './types';
 
-
-
 const initialState: ProductsState = {
   status: 'loading',
   error: null,
