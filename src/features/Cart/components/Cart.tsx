@@ -25,7 +25,7 @@ const Cart: FC<Props> = ({ dispatch, cartProducts, totalPrice }) => {
                 <div>
                   <img src={cartProduct.image} alt="cart-product-img" className='cart-product-img' />
                   <p>{cartProduct.title}</p>
-                  <p><b>{cartProduct.price}</b> руб.</p>
+                  <p>{cartProduct.quantity} x <b>{cartProduct.price}</b> руб.</p>
                 </div>
                 <div>
                   <Button className='button' onClick={() => handleDeleteFromCart(dispatch, cartProduct)}><FaShoppingCart />

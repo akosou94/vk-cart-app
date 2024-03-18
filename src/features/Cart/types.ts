@@ -5,4 +5,5 @@ export interface CartState {
   error: null | string;
   cart: Product[];
   totalPrice: number
+  quantity: number
 }
